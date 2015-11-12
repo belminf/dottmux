@@ -8,7 +8,7 @@ git clone --recursive git@github.com:belminf/dottmux.git ~/.tmux
 git clone --recursive https://github.com/belminf/dottmux.git ~/.tmux
 
 # Link config
-ln -s ~/.tmux.conf ~/.tmux/tmux.conf
+ln -s ~/.tmux/tmux.conf ~/.tmux.conf
 ```
 
 Keys:
