@@ -13,9 +13,9 @@ ln -s ~/.tmux/tmux.conf ~/.tmux.conf
 
 Keys:
 -----
-Super: <kbd>Ctrl</kbd><kbd>q</kbd>
+Super: <kbd>Ctrl</kbd><kbd>Space</kbd>
 
-* <kbd>Ctrl</kbd><kbd>q</kbd>: Next window
+* <kbd>Ctrl</kbd><kbd>Space</kbd>: Next window
 * <kbd>s</kbd>: Open SSH window to provided hosts
 * <kbd>`</kbd>: Open SSH panes to provided hosts
 * <kbd>Tab</kbd>: Next pane
