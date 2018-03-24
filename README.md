@@ -16,11 +16,19 @@ Keys:
 Super: <kbd>Ctrl</kbd><kbd>Space</kbd>
 
 * <kbd>Ctrl</kbd><kbd>Space</kbd>: Next window
-* <kbd>s</kbd>: Open SSH window to provided hosts
-* <kbd>`</kbd>: Open SSH panes to provided hosts
-* <kbd>Tab</kbd>: Next pane
-* <kbd>S</kbd>: Toggle synchronized panes
-* <kbd>p</kbd>: Paste clipboard
-* <kbd>v</kbd>: Begin copy mode
-* [Copy mode]<kbd>v</kbd>: Begin selection
-* [Copy mode]<kbd>y</kbd>: Yank (copy) selection
+* <kbd>R</kbd>: Reload configuration
+* Panes:
+  * <kbd>Tab</kbd>: Next pane
+  * <kbd>Shift</kbd><kbd>S</kbd>: Toggle synchronized panes
+  * Split:
+    * <kbd>|</kbd>: Horizontal split
+    * <kbd>\_</kbd>: Vertical split
+* SSH:
+  * <kbd>S</kbd>: Open SSH window to provided hosts
+  * <kbd>\`</kbd>: Open SSH panes to provided hosts
+* Clipboard:
+  * <kbd>P</kbd>: Paste clipboard
+  * <kbd>V</kbd>: Begin copy mode
+  * In copy mode:
+    * <kbd>V</kbd>: Begin selection
+    * <kbd>Y</kbd>: Yank (copy) selection
