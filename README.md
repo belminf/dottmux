@@ -11,6 +11,11 @@ git clone --recursive https://github.com/belminf/dottmux.git ~/.tmux
 ln -s ~/.tmux/tmux.conf ~/.tmux.conf
 ```
 
+For macOS clipboard, need (see `macOS.conf`):
+```
+brew install reattach-to-user-namespace
+```
+
 Keys:
 -----
 Super: <kbd>Ctrl</kbd><kbd>Space</kbd>
