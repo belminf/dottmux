@@ -1,19 +1,23 @@
 #!/usr/bin/env bash
 
-# Configuration
-TMUX_SESSION_GROUP="term"
-
 # Break on error
-set -e
+set -eo pipefail
 
-# Check if any unattached session
-UNATTACHED_SESSION="$(tmux list-session | grep -e "\(group ${TMUX_SESSION_GROUP}\)$" | head -n 1 | cut -d':' -f1)"
+SESSION_GROUP="default"
+WINDOW_NAME="home"
 
-# If we found an unattached session, attach to it
-if [ -n "$UNATTACHED_SESSION" ]; then
+# If no group, create it with a default window
+if ! tmux list-sessions 2>/dev/null | grep -q "(group ${SESSION_GROUP})"; then
+  echo 'tmux - creating new group'
+  tmux new-session -t "$SESSION_GROUP" \; rename-window "$WINDOW_NAME"
+
+# If group, check for sessions
+elif UNATTACHED_SESSION="$(tmux list-session | grep -e "\(group ${SESSION_GROUP}\)$" | head -n 1 | cut -d':' -f1)"; then
+  echo 'tmux - attaching to unused session'
   tmux attach-session -t "$UNATTACHED_SESSION"
 
 # Otherwise, create a new session in the group
 else
-  tmux new-session -t "$TMUX_SESSION_GROUP" -n home
+  echo 'tmux - creating a new session'
+  tmux new-session -t "$SESSION_GROUP"
 fi
