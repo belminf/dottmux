@@ -15,5 +15,5 @@ if [ -n "$UNATTACHED_SESSION" ]; then
 
 # Otherwise, create a new session in the group
 else
-  tmux new-session -t "$TMUX_SESSION_GROUP"
+  tmux new-session -t "$TMUX_SESSION_GROUP" -n home
 fi
