@@ -13,7 +13,7 @@ yay -S fpp urlview xsel
 macOS:
 
 ```
-brew install reattach-to-user-namespace fpp urlview
+brew install fpp urlview
 ```
 
 ### Install
