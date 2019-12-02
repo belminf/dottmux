@@ -7,7 +7,7 @@
 Arch:
 
 ```
-yay -S fpp urlview xsel
+yay -S fpp urlview xclip
 ```
 
 macOS:
