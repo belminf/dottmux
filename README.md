@@ -34,6 +34,8 @@ git pull
 git submodule update --init
 ```
 
+To update plugins: <kbd>Super<kbd>+<kbd>U</kbd>
+
 ## Keys:
 
 Super: <kbd>Ctrl</kbd><kbd>Space</kbd>
