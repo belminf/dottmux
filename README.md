@@ -48,6 +48,9 @@ Super: <kbd>Ctrl</kbd><kbd>Space</kbd>
   - Split:
     - <kbd>|</kbd>: Horizontal split
     - <kbd>\_</kbd>: Vertical split
+  - Move:
+    - <kbd>{</kbd>: Clockwise
+    - <kbd>}</kbd>: Counter clockwise
 - Clipboard:
   - <kbd>P</kbd>: Paste clipboard
   - <kbd>V</kbd>: Begin copy mode
