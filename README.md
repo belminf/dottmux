@@ -51,6 +51,9 @@ Super: <kbd>Ctrl</kbd><kbd>Space</kbd>
   - Move:
     - <kbd>{</kbd>: Clockwise
     - <kbd>}</kbd>: Counter clockwise
+  - Window placement:
+    - <kbd>!</kbd>: Split into its own window
+    - <kbd>X</kbd>: Send pane to another window
 - Clipboard:
   - <kbd>P</kbd>: Paste clipboard
   - <kbd>V</kbd>: Begin copy mode
