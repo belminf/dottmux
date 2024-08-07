@@ -31,7 +31,7 @@ Then, you have to load plugins: <kbd>Ctrl</kbd><kbd>Space</kbd>+<kbd>Shift</kbd>
 
 ```
 git pull
-git submodule update --init
+git submodule update --remote --merge
 ```
 
 To update plugins: <kbd>Super<kbd>+<kbd>U</kbd>
