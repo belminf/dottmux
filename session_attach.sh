@@ -5,6 +5,7 @@ set -eo pipefail
 
 SESSION_GROUP="default"
 WINDOW_NAME="home"
+PATH="$PATH:/opt/homebrew/bin/"
 
 # If no group, create it with a default window
 if ! tmux list-sessions 2>/dev/null | grep -q "(group ${SESSION_GROUP})"; then
