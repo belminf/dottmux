@@ -6,11 +6,10 @@ build_left_status_module() {
   local color="$3"
   local text="$4"
 
-  local show_icon="#[fg=$thm_bg,bg=$color,nobold,nounderscore,noitalics]$icon"
-  local show_text="#[fg=$thm_bg,bg=$color]$text"
-  local show_right_separator="#[fg=$color,bg=default,nobold,nounderscore,noitalics]$status_right_separator"
+  local print_text="#[fg=#000000,bg=$color,nobold,nounderscore,noitalics]$icon"
+  [ -n "$text" ] && print_text+="#[fg=#000000,bg=$color]$text"
 
-  echo "$show_text$show_icon"
+  echo "$print_text"
 }
 
 show_custom_left() {
