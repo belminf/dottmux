@@ -7,7 +7,7 @@ build_left_status_module() {
   local text="$4"
 
   local show_icon="#[fg=$thm_bg,bg=$color,nobold,nounderscore,noitalics] $icon"
-  local show_text="#[fg=$thm_fg,bg=$thm_gray]$text"
+  local show_text="#[fg=$thm_bg,bg=$color]$text"
   local show_right_separator="#[fg=$color,bg=default,nobold,nounderscore,noitalics]$status_right_separator"
 
   echo "$show_text$show_icon$show_right_separator"
