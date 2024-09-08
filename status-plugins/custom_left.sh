@@ -17,7 +17,7 @@ show_custom_left() {
 
   index="$1"
   icon="$(get_tmux_option "@catppuccin_custom_left_icon" "󰃰")"
-  color="$(get_tmux_option "@catppuccin_custom_left_color" "$thm_blue")"
+  color="$(get_tmux_option "@catppuccin_custom_left_color" "color109")"
   text="$(get_tmux_option "@catppuccin_custom_left_text")"
 
   echo "$(build_left_status_module "$index" "$icon" "$color" "$text")"

@@ -3,7 +3,7 @@ show_world_clock() {
 
   index="$1"
   icon="$(get_tmux_option "@catppuccin_date_time_icon" "｜󰥔")"
-  color="$(get_tmux_option "@catppuccin_date_time_color" "$thm_blue")"
+  color="$(get_tmux_option "@catppuccin_date_time_color" "color109")"
 
   text='#(TZ="America/Los_Angeles" date +"%%H:%%M %%Z") ｜#(date -u +"%%H:%%M %%Z")'
 
