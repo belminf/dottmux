@@ -4,34 +4,32 @@
 
 ### Requirements
 
-Arch:
+#### Arch
 
-```
+```bash
 yay -S fpp urlview xclip
 ```
 
-macOS:
+#### macOS
 
-```
+```bash
 brew install fpp urlview
 ```
 
 ### Install
 
-Clone and link
 
-```
+```bash
 git clone --recursive git@github.com:belminf/dottmux.git ~/.tmux
-ln -s ~/.tmux/tmux.conf ~/.tmux.conf
+make init
 ```
 
 Then, you have to load plugins: <kbd>Ctrl</kbd><kbd>Space</kbd>+<kbd>Shift</kbd><kbd>I</kbd>
 
 ## Update
 
-```
-git pull
-git submodule update --remote --merge
+```bash
+make update
 ```
 
 To update plugins: <kbd>Super<kbd>+<kbd>U</kbd>
