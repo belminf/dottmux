@@ -38,7 +38,7 @@ To update plugins: <kbd>Super<kbd>+<kbd>U</kbd>
 
 Super: <kbd>Ctrl</kbd><kbd>Space</kbd>
 
-- <kbd>Ctrl</kbd><kbd>Space</kbd>: Next window
+- <kbd>N</kbd>: Next window
 - <kbd>R</kbd>: Reload configuration
 - Panes:
   - <kbd>Tab</kbd>: Next pane
