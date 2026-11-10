@@ -1,60 +1,57 @@
 # tmux config
 
+A single `tmux.conf` with no plugins. Catppuccin Mocha theme, palette inlined at the top.
+
 ## Setup
 
-### Requirements
-
-#### Arch
+Needs tmux ≥ 3.2. Optional: `wl-clipboard` (Wayland) for native copy/paste.
 
 ```bash
-yay -S fpp urlview xclip
+git clone git@github.com:belminf/dottmux.git ~/.tmux
+make init      # symlink ~/.tmux.conf
+make update    # git pull
 ```
 
-#### macOS
+- Per-machine tweaks: `~/.tmux.local.conf`
+- Status-left widgets: executable scripts in `~/.tmux/monitors/` that print a string (gitignored)
 
-```bash
-brew install fpp urlview
-```
+## Keys
 
-### Install
+Prefix: <kbd>Ctrl</kbd>+<kbd>Space</kbd> (again = last window). Reload: <kbd>R</kbd>
 
+### Windows
 
-```bash
-git clone --recursive git@github.com:belminf/dottmux.git ~/.tmux
-make init
-```
+| Key | Action |
+| --- | --- |
+| <kbd>c</kbd> / <kbd>C</kbd> | New window (named / random name) |
+| <kbd>.</kbd> | Rename |
+| <kbd>&lt;</kbd> / <kbd>&gt;</kbd> | Shift window left / right |
+| <kbd>,</kbd> | Swap with window N |
+| <kbd>n</kbd> / <kbd>P</kbd> | Next / previous |
 
-Then, you have to load plugins: <kbd>Ctrl</kbd><kbd>Space</kbd>+<kbd>Shift</kbd><kbd>I</kbd>
+### Panes
 
-## Update
+| Key | Action |
+| --- | --- |
+| <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd> | Focus (<kbd>H</kbd><kbd>J</kbd><kbd>K</kbd><kbd>L</kbd> resizes) |
+| <kbd>\|</kbd> / <kbd>-</kbd> | Split side-by-side / stacked |
+| <kbd>\\</kbd> / <kbd>_</kbd> | Same, full window width/height |
+| <kbd>Space</kbd> | Cycle layout: even squares → side by side → stacked |
+| <kbd>z</kbd> | Zoom |
+| <kbd>S</kbd> | Sync input to all panes |
 
-```bash
-make update
-```
+Moving panes:
 
-To update plugins: <kbd>Super<kbd>+<kbd>U</kbd>
+| Key | Action |
+| --- | --- |
+| <kbd>{</kbd> / <kbd>}</kbd> | Swap pane with previous / next (repeatable) |
+| <kbd>!</kbd> | Pane → its own window |
+| <kbd>X</kbd> | Send pane to window N |
+| <kbd>M</kbd> | Pull pane in from window N |
 
-## Keys:
+### Copy / paste
 
-Super: <kbd>Ctrl</kbd><kbd>Space</kbd>
-
-- <kbd>N</kbd>: Next window
-- <kbd>R</kbd>: Reload configuration
-- Panes:
-  - <kbd>Tab</kbd>: Next pane
-  - <kbd>Shift</kbd><kbd>S</kbd>: Toggle synchronized panes
-  - Split:
-    - <kbd>|</kbd>: Horizontal split
-    - <kbd>\_</kbd>: Vertical split
-  - Move:
-    - <kbd>{</kbd>: Clockwise
-    - <kbd>}</kbd>: Counter clockwise
-  - Window placement:
-    - <kbd>!</kbd>: Split into its own window
-    - <kbd>X</kbd>: Send pane to another window
-- Clipboard:
-  - <kbd>P</kbd>: Paste clipboard
-  - <kbd>V</kbd>: Begin copy mode
-  - In copy mode:
-    - <kbd>V</kbd>: Begin selection
-    - <kbd>Y</kbd>: Yank (copy) selection
+| Key | Action |
+| --- | --- |
+| <kbd>v</kbd> | Copy mode (then <kbd>v</kbd> select, <kbd>y</kbd> yank, <kbd>Esc</kbd> quit) |
+| <kbd>p</kbd> / middle-click | Paste tmux buffer / system clipboard |
